@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<style>
+	body{
+		background-color: blueviolet;
+	}
+</style>
+
+</head>
+<body>
+	<h1>Simple Calculator Using Javascript</h1>
+
+	<p>Enter First Number:</p>
+	<input type="number" id="first" value="">
+	<p>Enter Second Number:</p>
+	<input type="number" id="second" value=""><br>
+
+
+	<button onclick="Calculator()"> Calculate</button><br>
+
+
+	<p id="sum"></p>
+	<p id="difference"></p>
+	<p id="product"></p>
+	<p id="quotient"></p>
+	<script >
+		function Calculator() {
+		let a, b, result;
+
+		a = document.getElementById("first").value;
+		b = document.getElementById("second").value;
+
+		result = parseInt(a) + parseInt(b);
+		document.getElementById("sum").innerHTML = "The sum of "+ a + " and " + b +  " is "+ result;
+		result = a - b;
+		document.getElementById("difference").innerHTML = "The difference of "+ a + " and " + b+  " is "+ result;
+		result = a * b;
+		document.getElementById("product").innerHTML = "The product of "+ a  + " and " + b +  " is "+ result;
+		result = a / b;
+		document.getElementById("quotient").innerHTML = "The quotient of "+ a  + " and " + b+  " is "+ result;
+	}
+
+	</script>
+</body>
+</html>
